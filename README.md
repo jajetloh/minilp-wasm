@@ -2,7 +2,7 @@
 
 This is repository wraps the [minilp](https://crates.io/crates/minilp) crate for Rust, allow for compilation to WebAssembly, for use in web browsers.
 
-An example application calling the compiled WebAssembly module can be found in ``minilp-wasm-test``.
+An example Angular application calling the compiled WebAssembly module can be found in ``minilp-wasm-test``. If you have Angular installed, the application can be run with ``ng serve``.
 
 # How to use in your front-end project
 
