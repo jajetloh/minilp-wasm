@@ -1,0 +1,16 @@
+{
+  "name": "minilp-wasm",
+  "version": "0.1.0",
+  "files": [
+    "minilp_wasm_bg.wasm",
+    "minilp_wasm.js",
+    "minilp_wasm_bg.js",
+    "minilp_wasm.d.ts"
+  ],
+  "module": "minilp_wasm.js",
+  "types": "minilp_wasm.d.ts",
+  "sideEffects": [
+    "./minilp_wasm.js",
+    "./snippets/*"
+  ]
+}
