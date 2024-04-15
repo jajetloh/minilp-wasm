@@ -1,30 +1,5 @@
 import { Component } from '@angular/core'
-import { solve_lp } from 'minilp-wasm'
-
-export enum LpProblemType {
-    Maximize,
-    Minimize,
-}
-
-export enum LpComparisonOp {
-    Lt,
-    Eq,
-    Gt,
-}
-
-export interface LpConstraint {
-    lhs: [string, number][],
-    op: LpComparisonOp,
-    rhs: number,
-}
-
-export interface LpProblem {
-    type: LpProblemType,
-    variables: [string, number | null, number | null][],
-    constraints: LpConstraint[],
-    objective: [string, number][],
-}
-
+import { solve_lp, LpProblem } from 'minilp-wasm'
 
 @Component({
     selector: 'app-root',
@@ -37,14 +12,14 @@ export class AppComponent {
 
     onClick() {
         let lpProblem: LpProblem = {
-            type: LpProblemType.Maximize,
+            type: 'Maximize',
             variables: [
                 ['x1', null, null],
                 ['x2', null, null],
             ],
             constraints: [
-                { lhs: [['x1', 3], ['x2', 1]], op: LpComparisonOp.Lt, rhs: 10 },
-                { lhs: [['x1', 1], ['x2', 3]], op: LpComparisonOp.Lt, rhs: 8 },
+                { lhs: [['x1', 3], ['x2', 1]], op: 'Lt', rhs: 10 },
+                { lhs: [['x1', 1], ['x2', 3]], op: 'Lt', rhs: 8 },
             ],
             objective: [
                 ['x1', 1],

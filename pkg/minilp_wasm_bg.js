@@ -214,12 +214,6 @@ function handleError(f, args) {
 }
 /**
 */
-export const LpProblemType = Object.freeze({ Maximize:0,"0":"Maximize",Minimize:1,"1":"Minimize", });
-/**
-*/
-export const LpComparisonOp = Object.freeze({ Lt:0,"0":"Lt",Eq:1,"1":"Eq",Gt:2,"2":"Gt", });
-/**
-*/
 export class LpConstraint {
 
     __destroy_into_raw() {
